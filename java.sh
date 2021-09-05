@@ -1,7 +1,6 @@
 #!/bin/bash
 shopt -s nullglob
 
-main=(main1, main2, main3, main4, main5)
 items=(~/java/*)
 x=0;
 
