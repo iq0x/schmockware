@@ -1,7 +1,7 @@
 #!/bin/bash
 shopt -s nullglob
 
-arr=(~/java/*)
+items=(~/java/*)
 x=0;
 
 engine()
@@ -12,11 +12,15 @@ engine()
 	echo "══╝ ╚══ ║  ║ ║ ║ ║ ╚══╝ ║╲   ╚═╩═╝ ║  ║ ║╲   ╚═══"
 	echo "════════════════════════║ ╲  ═════════  ║ ╲ ═══════  "
 	echo ""
-	echo "${arr[$x-2]}"
-	echo "${arr[$x-1]}"
-	echo "-> ${arr[$x]}"
-	echo "${arr[$x+1]}"
-	echo "${arr[$x+2]}"
+	echo "${items[$x-3]}"
+	echo "${items[$x-2]}"
+	echo "${items[$x-1]}"
+	echo "╔═════════════════════════════════════════════════╗"
+	echo "║${items[$x]}"
+	echo "╚═════════════════════════════════════════════════╝"
+	echo "${items[$x+1]}"
+	echo "${items[$x+2]}"
+	echo "${items[$x+3]}"
 }
 
 up() 
@@ -26,7 +30,7 @@ up()
 	engine
 	read -rsn1 key2
 	case $key2 in
-		'') java "${arr[$x]}" ;;
+		'') java "${items[$x]}" ;;
 	esac
 }
 
@@ -37,13 +41,13 @@ down()
 	engine
 	read -rsn1 key2
 	case $key2 in
-		'') java "${arr[$x]}" ;;
+		'') java "${items[$x]}" ;;
 	esac
 }
 
 
-for ((i=0; i<${#arr[@]}; i++)); do
-    echo "${arr[$i]}"
+for ((i=0; i<${#items[@]}; i++)); do
+    echo "${items[$i]}"
 done
 
 
