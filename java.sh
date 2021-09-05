@@ -9,12 +9,13 @@ x=0;
 
 engine()
 {
-	echo "╔═════════════════════════════════════════════════════════╗"
-	echo "║ JJJJJ AAAA V  V AAAA"
-	echo "║    JJ A  A V  V A  A"
-	echo "║    JJ AAAA V  V AAAA"
-	echo "║  JJJ  A  A  VV  A  A"   
-	echo "║ ════════════════════════════════════════════════════════"
+	echo "╔═════════════════════════════════════════════════════════════╗"
+	echo "║ JJJJJ AAAA V  V AAAA    SSSS H  H OOOO W   W"
+	echo "║    JJ A  A V  V A  A    S    H  H O  O W   W" 
+	echo "║    JJ AAAA V  V AAAA    SSSS HHHH O  O W W W"
+	echo "║    JJ A  A V  V A  A       S H  H O  O WW WW"    
+	echo "║  JJJ  A  A  VV  A  A    SSSS H  H OOOO W   W  v0.1"    
+	echo "║ ═════════════════════════════════════════════════════════════"
 	echo "║                                                         "
 	echo "║ ${items[$x-3]}"
 	echo "║ ${items[$x-2]}"
@@ -25,7 +26,7 @@ engine()
 	echo "║ ${items[$x+1]}"
 	echo "║ ${items[$x+2]}"
 	echo "║ ${items[$x+3]}"
-	echo "╚═════════════════════════════════════════════════════════╝"
+	echo "╚═════════════════════════════════════════════════════════════╝"
 }
 
 up() 
