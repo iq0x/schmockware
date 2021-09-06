@@ -12,7 +12,7 @@ engine()
 	echo "║ JJJJJ AAAA V  V AAAA    SSSS H  H OOOO W   W"
 	echo "║    JJ A  A V  V A  A    S    H  H O  O W   W" 
 	echo "║    JJ AAAA V  V AAAA    SSSS HHHH O  O W W W"
-	echo "║    JJ A  A V  V A  A       S H  H O  O WW WW"    
+	echo "║    JJ A  A V  V A  A       S H  H O  O WW WW  plugin"    
 	echo "║  JJJ  A  A  VV  A  A    SSSS H  H OOOO W   W  v0.1"    
 	echo "║ ═════════════════════════════════════════════════════════════"
 	echo "║                                                         "
@@ -28,11 +28,18 @@ engine()
 	echo "╚═════════════════════════════════════════════════════════════╝"
 }
 
+clear;
+engine
+
 up() 
 {
-		clear;
+	clear;
 	((x--))
-engine
+	if [ $x == -2 ]
+	then
+		((x++))
+	fi
+	engine
 	read -rsn1 key2
 	case $key2 in
 		'') java "${items[$x]}" ;;
@@ -52,8 +59,7 @@ down()
 
 MAIN() 
 {
-./main.sh
-
+	./main.sh
 }
 
 
