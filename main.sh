@@ -1,13 +1,14 @@
 #!/bin/bash
 shopt -s nullglob
 
-main=(emulationstation kodi ./java.sh EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY)
+main=(emulationstation kodi ./java.sh ./audio.sh EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY)
 x=0;
 
 
 
 engine()
 {
+
 	echo "╔═════════════════════════════════════════════════════════════╗"
 	echo "║ ╔══ ╔══ ║  ║ ╔═╦═╗ ╔══╗ ╔══ ║ ╱  ║ ║ ║ ╔══╗ ╔══╗ ╔═══       "
 	echo "║ ╚═╗ ║   ╠══╣ ║ ║ ║ ║  ║ ║   ║╱   ║ ║ ║ ╠══╣ ╠══╝ ╠═══       "
