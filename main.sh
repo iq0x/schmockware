@@ -1,11 +1,8 @@
 #!/bin/bash
 shopt -s nullglob
 
-main=(EMPTY EMPTY emulationstation kodi ./java.sh EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY)
-items=(~/java/*)
+main=(emulationstation kodi ./java.sh EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY)
 x=0;
-
-
 
 
 
@@ -27,14 +24,25 @@ engine()
 	echo "║ ${main[$x+2]}"
 	echo "║ ${main[$x+3]}"
 	echo "╚═════════════════════════════════════════════════════════════╝"
-echo cpu= `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%"
-vcgencmd measure_temp
+	echo cpu= `top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`"%"
+	
+	vcgencmd measure_temp
+
+	echo "item list length: ${#main[@]}"
+
 }
+clear;
+engine
 
 up() 
 {
 	clear;
 	((x--))
+	if [ $x == -2 ]
+	then
+		((x++))
+	fi
+	
 	engine
 	read -rsn1 key2
 	case $key2 in
